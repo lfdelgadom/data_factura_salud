@@ -1,0 +1,2056 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2870
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Act\'faa como un equipo multidisciplinario integrado por:\
+\
+1. Un desarrollador Python senior.\
+2. Un especialista en Streamlit.\
+3. Un analista de datos del sector salud.\
+4. Un cient\'edfico de datos especializado en an\'e1lisis exploratorio.\
+5. Un analista financiero especializado en facturaci\'f3n, radicaci\'f3n, glosas, recaudo y cartera.\
+6. Un dise\'f1ador de tableros ejecutivos.\
+7. Un especialista en visualizaci\'f3n de datos.\
+8. Un dise\'f1ador UX/UI especializado en aplicaciones anal\'edticas.\
+9. Un especialista en validaci\'f3n y calidad de datos.\
+10. Un especialista en despliegue de aplicaciones en Streamlit Community Cloud.\
+\
+Tu tarea es desarrollar una aplicaci\'f3n web completa, profesional, interactiva y desplegable en Streamlit Community Cloud para analizar archivos de facturaci\'f3n del sector salud.\
+\
+La aplicaci\'f3n debe llamarse:\
+\
+\'93ANAL\'cdTICA DE FACTURACI\'d3N EN SALUD\'94\
+\
+Subt\'edtulo:\
+\
+\'93Facturaci\'f3n, radicaci\'f3n, glosas, recaudo y cartera\'94\
+\
+La soluci\'f3n debe recibir un archivo cargado por el usuario, procesarlo, validar su estructura, generar indicadores, gr\'e1ficos, an\'e1lisis estad\'edsticos, alertas e insights ejecutivos.\
+\
+No te limites a describir el c\'f3digo. Debes crear directamente los archivos funcionales solicitados.\
+\
+==================================================\
+1. PRODUCTOS QUE DEBES ENTREGAR\
+==================================================\
+\
+Entrega obligatoriamente:\
+\
+1. Un archivo completo llamado:\
+\
+app.py\
+\
+2. Un archivo completo llamado:\
+\
+requirements.txt\
+\
+Los dos archivos deben quedar listos para descargarse y subirse directamente a la ra\'edz de un repositorio de GitHub.\
+\
+No crees subdirectorios.\
+\
+No entregues \'fanicamente fragmentos de c\'f3digo.\
+\
+No dejes funciones incompletas.\
+\
+No utilices pseudoc\'f3digo.\
+\
+No incluyas marcadores como:\
+\
+- \'93Agregar c\'f3digo aqu\'ed\'94.\
+- \'93Completar despu\'e9s\'94.\
+- \'93TODO\'94.\
+- \'93Implementar esta funci\'f3n\'94.\
+- \'93Configurar manualmente\'94.\
+\
+El archivo app.py debe ejecutar toda la aplicaci\'f3n.\
+\
+El archivo requirements.txt debe incluir solamente las dependencias externas necesarias.\
+\
+No incluyas librer\'edas est\'e1ndar de Python como:\
+\
+- os\
+- io\
+- datetime\
+- math\
+- re\
+- statistics\
+- collections\
+- pathlib\
+\
+Estas librer\'edas forman parte de Python y no deben incorporarse en requirements.txt.\
+\
+==================================================\
+2. OBJETIVO GENERAL\
+==================================================\
+\
+Desarrolla una aplicaci\'f3n web en Streamlit que permita cargar, validar, explorar y analizar archivos de facturaci\'f3n del sector salud.\
+\
+La aplicaci\'f3n debe ayudar al usuario a:\
+\
+- Conocer cu\'e1nto se ha facturado.\
+- Analizar la facturaci\'f3n radicada.\
+- Comparar valor bruto y valor neto.\
+- Evaluar descuentos y copagos.\
+- Medir el recaudo.\
+- Analizar glosas.\
+- Identificar saldos de cartera.\
+- Evaluar estados de facturaci\'f3n.\
+- Comparar entidades pagadoras.\
+- Comparar sedes.\
+- Comparar servicios.\
+- Comparar l\'edneas de servicio.\
+- Analizar tiempos entre emisi\'f3n y radicaci\'f3n.\
+- Realizar cierres mensuales.\
+- Detectar valores at\'edpicos.\
+- Identificar concentraciones de ingresos y cartera.\
+- Generar insights para apoyar la toma de decisiones.\
+- Descargar los resultados de los an\'e1lisis.\
+\
+La aplicaci\'f3n debe funcionar exclusivamente con el archivo que cargue el usuario.\
+\
+No debe depender del dataset utilizado durante el desarrollo.\
+\
+No debe incluir una ruta fija hacia un archivo en el computador.\
+\
+No debe intentar abrir autom\'e1ticamente un archivo local.\
+\
+No debe depender de Google Drive, OneDrive, bases de datos o APIs externas.\
+\
+==================================================\
+3. TECNOLOG\'cdAS REQUERIDAS\
+==================================================\
+\
+Utiliza principalmente:\
+\
+- Python.\
+- Streamlit.\
+- pandas.\
+- numpy.\
+- Plotly.\
+- openpyxl.\
+- scipy.\
+\
+Puedes utilizar tambi\'e9n:\
+\
+- io, incluido en Python.\
+- datetime, incluido en Python.\
+- statistics, incluido en Python.\
+\
+Prioriza Plotly para los gr\'e1ficos interactivos.\
+\
+No utilices Matplotlib ni Seaborn, salvo que exista una justificaci\'f3n t\'e9cnica indispensable. Todos los gr\'e1ficos principales deben ser interactivos, permitir informaci\'f3n emergente y adaptarse al ancho de la aplicaci\'f3n.\
+\
+No utilices:\
+\
+- Bases de datos.\
+- APIs externas.\
+- Servicios que requieran claves.\
+- Modelos de lenguaje externos.\
+- Autenticaci\'f3n obligatoria.\
+- Rutas locales.\
+- C\'f3digo dependiente de Windows.\
+- Procesos que requieran un servidor diferente al de Streamlit.\
+- Archivos secretos.\
+- Selenium.\
+- Librer\'edas excesivamente pesadas sin necesidad.\
+\
+==================================================\
+4. ARCHIVO REQUIREMENTS.TXT\
+==================================================\
+\
+Genera un requirements.txt compatible con Streamlit Community Cloud.\
+\
+Incluye las dependencias realmente utilizadas en app.py.\
+\
+Como base, utiliza:\
+\
+streamlit\
+pandas\
+numpy\
+plotly\
+openpyxl\
+scipy\
+\
+Puedes incorporar otra librer\'eda solamente si est\'e1 directamente utilizada y es indispensable.\
+\
+Evita fijar versiones innecesariamente restrictivas que puedan provocar conflictos. Si decides fijarlas, utiliza versiones compatibles entre s\'ed y con una versi\'f3n de Python que reciba actualizaciones de seguridad.\
+\
+No incluyas nombres incorrectos como:\
+\
+- streamlink\
+- excel\
+- python\
+- io\
+- datetime\
+- os\
+\
+La aplicaci\'f3n se desarrolla con Streamlit, no con Streamlink.\
+\
+==================================================\
+5. FUENTE DE DATOS\
+==================================================\
+\
+La aplicaci\'f3n debe comenzar sin datos cargados.\
+\
+Debe mostrar un componente:\
+\
+st.file_uploader()\
+\
+Texto sugerido:\
+\
+\'93Cargue el archivo de facturaci\'f3n que desea analizar\'94\
+\
+Permite cargar:\
+\
+- Archivos Excel con extensi\'f3n .xlsx.\
+- Archivos Excel con extensi\'f3n .xls, \'fanicamente si las dependencias incorporadas permiten procesarlos correctamente.\
+- Archivos CSV con extensi\'f3n .csv.\
+\
+Para Excel:\
+\
+- Detecta las hojas disponibles.\
+- Permite al usuario seleccionar la hoja que desea analizar.\
+- Selecciona autom\'e1ticamente la hoja \'93Facturacion\'94 si existe.\
+- Si no existe, permite elegir otra hoja.\
+- No asumas que la informaci\'f3n siempre est\'e1 en la primera hoja.\
+\
+Para CSV:\
+\
+- Intenta detectar la codificaci\'f3n.\
+- Intenta identificar el separador.\
+- Permite escoger entre coma, punto y coma, tabulaci\'f3n y detecci\'f3n autom\'e1tica si la lectura inicial falla.\
+- Muestra un mensaje comprensible si el archivo no puede abrirse.\
+\
+El archivo cargado debe procesarse en memoria.\
+\
+No guardes el archivo permanentemente.\
+\
+No recopiles ni env\'edes los datos a servicios externos.\
+\
+==================================================\
+6. ESTRUCTURA ESPERADA DEL DATASET\
+==================================================\
+\
+La estructura principal esperada contiene las siguientes columnas:\
+\
+COLUMNAS DE IDENTIFICACI\'d3N:\
+\
+- ID_Factura\
+- Numero_Radicado\
+\
+COLUMNAS TEMPORALES:\
+\
+- Fecha_Servicio\
+- Fecha_Emision\
+- Fecha_Radicacion\
+- Fecha_Aceptacion\
+- Fecha_Pago\
+- Periodo_Cierre\
+\
+COLUMNAS DE ENTIDAD:\
+\
+- Codigo_Entidad\
+- Entidad_Pagadora\
+- Regimen\
+\
+COLUMNAS OPERATIVAS:\
+\
+- Sede\
+- Codigo_Servicio\
+- Servicio\
+- Linea_Servicio\
+- Cantidad\
+- Canal_Radicacion\
+- Estado_Factura\
+- Dias_Emision_Radicacion\
+- Soporte_Completo\
+\
+COLUMNAS FINANCIERAS:\
+\
+- Valor_Bruto\
+- Descuento\
+- Copago_Cuota\
+- Valor_Neto\
+- Glosa_Inicial\
+- Valor_Pagado\
+- Saldo_Cartera\
+\
+No exijas todas las columnas para abrir la aplicaci\'f3n.\
+\
+Clasifica las columnas en tres grupos:\
+\
+A. COLUMNAS M\'cdNIMAS:\
+\
+- ID_Factura\
+- Fecha_Radicacion o Periodo_Cierre\
+- Valor_Neto\
+\
+B. COLUMNAS RECOMENDADAS:\
+\
+- Entidad_Pagadora\
+- Estado_Factura\
+- Valor_Pagado\
+- Saldo_Cartera\
+- Glosa_Inicial\
+\
+C. COLUMNAS OPCIONALES:\
+\
+Todas las dem\'e1s.\
+\
+Si faltan columnas m\'ednimas, no ejecutes los an\'e1lisis financieros principales. Muestra:\
+\
+- Qu\'e9 columnas fueron encontradas.\
+- Qu\'e9 columnas faltan.\
+- Qu\'e9 nombres se esperaban.\
+- C\'f3mo puede corregirse el archivo.\
+\
+Si faltan columnas recomendadas u opcionales:\
+\
+- Permite continuar.\
+- Desactiva \'fanicamente los an\'e1lisis que dependan de ellas.\
+- Muestra una advertencia clara.\
+- No provoques errores.\
+\
+==================================================\
+7. NORMALIZACI\'d3N DE NOMBRES\
+==================================================\
+\
+La aplicaci\'f3n debe ser tolerante con peque\'f1as diferencias en los encabezados.\
+\
+Crea una funci\'f3n para normalizar nombres que:\
+\
+- Elimine espacios iniciales y finales.\
+- Reemplace espacios por guiones bajos.\
+- Reemplace guiones por guiones bajos.\
+- Elimine dobles espacios.\
+- Ignore diferencias entre may\'fasculas y min\'fasculas.\
+- Facilite la comparaci\'f3n sin tildes.\
+- Detecte nombres equivalentes frecuentes.\
+\
+Ejemplos de equivalencias:\
+\
+- \'93ID Factura\'94 \uc0\u8594  ID_Factura\
+- \'93id_factura\'94 \uc0\u8594  ID_Factura\
+- \'93N\'famero Radicado\'94 \uc0\u8594  Numero_Radicado\
+- \'93Entidad Pagadora\'94 \uc0\u8594  Entidad_Pagadora\
+- \'93Fecha Radicaci\'f3n\'94 \uc0\u8594  Fecha_Radicacion\
+- \'93Valor Neto\'94 \uc0\u8594  Valor_Neto\
+- \'93Saldo Cartera\'94 \uc0\u8594  Saldo_Cartera\
+- \'93Glosa Inicial\'94 \uc0\u8594  Glosa_Inicial\
+- \'93Valor Pagado\'94 \uc0\u8594  Valor_Pagado\
+- \'93L\'ednea de Servicio\'94 \uc0\u8594  Linea_Servicio\
+\
+Antes de renombrar autom\'e1ticamente:\
+\
+- Muestra un resumen de las equivalencias encontradas.\
+- Evita generar nombres duplicados.\
+- Si existe ambig\'fcedad, permite que el usuario asigne manualmente la columna.\
+\
+==================================================\
+8. ASISTENTE DE MAPEO DE COLUMNAS\
+==================================================\
+\
+Incluye un m\'f3dulo desplegable llamado:\
+\
+\'93Configurar correspondencia de columnas\'94\
+\
+Permite asociar las columnas del archivo con los campos esperados.\
+\
+Utiliza selectbox para identificar:\
+\
+- Identificador de factura.\
+- Fecha de servicio.\
+- Fecha de emisi\'f3n.\
+- Fecha de radicaci\'f3n.\
+- Periodo de cierre.\
+- Entidad pagadora.\
+- R\'e9gimen.\
+- Sede.\
+- Servicio.\
+- L\'ednea de servicio.\
+- Cantidad.\
+- Valor bruto.\
+- Descuento.\
+- Copago.\
+- Valor neto.\
+- Estado.\
+- D\'edas de radicaci\'f3n.\
+- Soporte completo.\
+- Glosa.\
+- Fecha de pago.\
+- Valor pagado.\
+- Saldo de cartera.\
+\
+El usuario debe poder seleccionar:\
+\
+\'93Columna no disponible\'94\
+\
+Guarda el mapeo en st.session_state durante la sesi\'f3n.\
+\
+No almacenes el mapeo permanentemente.\
+\
+==================================================\
+9. VALIDACI\'d3N DE CALIDAD DE DATOS\
+==================================================\
+\
+Despu\'e9s de cargar el archivo, crea una secci\'f3n:\
+\
+\'93Diagn\'f3stico de calidad de datos\'94\
+\
+Debe calcular:\
+\
+- N\'famero de filas.\
+- N\'famero de columnas.\
+- Columnas encontradas.\
+- Columnas ausentes.\
+- Filas duplicadas.\
+- ID de factura duplicados.\
+- Radicados duplicados.\
+- Valores nulos por columna.\
+- Porcentaje de nulos.\
+- Fechas inv\'e1lidas.\
+- Valores financieros no num\'e9ricos.\
+- Valores negativos.\
+- Valores netos iguales a cero.\
+- Facturas sin entidad pagadora.\
+- Facturas sin periodo.\
+- Fechas de radicaci\'f3n anteriores a las fechas de emisi\'f3n.\
+- Fechas de pago anteriores a la radicaci\'f3n.\
+- Saldos de cartera superiores al valor neto.\
+- Pagos superiores al valor neto.\
+- Glosas superiores al valor neto.\
+- Inconsistencias de la identidad financiera.\
+\
+Valida, cuando existan las columnas necesarias:\
+\
+Valor_Neto \uc0\u8776  Valor_Bruto - Descuento - Copago_Cuota\
+\
+Y tambi\'e9n:\
+\
+Saldo_Cartera \uc0\u8776  Valor_Neto - Glosa_Inicial - Valor_Pagado\
+\
+Utiliza una tolerancia configurable para diferencias de redondeo.\
+\
+No modifiques silenciosamente los datos.\
+\
+Si realizas una conversi\'f3n de tipos, informa:\
+\
+- Qu\'e9 columna fue convertida.\
+- Cu\'e1ntos valores no pudieron convertirse.\
+- Cu\'e1ntos valores quedaron nulos.\
+\
+Crea un puntaje orientativo de calidad entre 0 y 100 basado en:\
+\
+- Completitud.\
+- Unicidad.\
+- Validez.\
+- Consistencia.\
+\
+Aclara:\
+\
+\'93El puntaje es un indicador exploratorio de calidad y no reemplaza una auditor\'eda de datos.\'94\
+\
+==================================================\
+10. LIMPIEZA CONTROLADA\
+==================================================\
+\
+Incluye opciones en la barra lateral para:\
+\
+- Eliminar filas completamente vac\'edas.\
+- Eliminar duplicados exactos.\
+- Convertir columnas de fecha.\
+- Convertir columnas monetarias.\
+- Reemplazar valores vac\'edos en categor\'edas por \'93Sin informaci\'f3n\'94.\
+- Excluir registros con Valor_Neto inv\'e1lido.\
+- Excluir registros con fechas inv\'e1lidas.\
+- Aplicar o no las transformaciones.\
+\
+Muestra:\
+\
+- Registros iniciales.\
+- Registros posteriores a la limpieza.\
+- Registros excluidos.\
+- Raz\'f3n de exclusi\'f3n.\
+\
+La limpieza debe aplicarse sobre una copia del DataFrame.\
+\
+Conserva los datos originales en memoria durante la sesi\'f3n.\
+\
+Incluye un bot\'f3n:\
+\
+\'93Restaurar datos originales\'94\
+\
+==================================================\
+11. MANEJO DE FECHAS\
+==================================================\
+\
+Convierte con:\
+\
+pd.to_datetime(..., errors="coerce")\
+\
+Genera, cuando sea posible:\
+\
+- A\'f1o_Radicacion.\
+- Mes_Radicacion.\
+- Numero_Mes.\
+- Trimestre_Radicacion.\
+- A\'f1o_Mes.\
+- D\'eda_Semana.\
+- Dias_Emision_Radicacion.\
+- Dias_Radicacion_Pago.\
+\
+Si no existe Periodo_Cierre, constr\'fayelo desde Fecha_Radicacion:\
+\
+AAAA-MM\
+\
+Si existe Periodo_Cierre, valida su formato.\
+\
+Evita depender de la configuraci\'f3n regional del sistema operativo para traducir los meses.\
+\
+Define manualmente los nombres de los meses en espa\'f1ol.\
+\
+Ordena los meses cronol\'f3gicamente y no alfab\'e9ticamente.\
+\
+==================================================\
+12. MANEJO DE VALORES MONETARIOS\
+==================================================\
+\
+Convierte las columnas financieras de manera robusta.\
+\
+La funci\'f3n debe reconocer, cuando sea razonablemente posible:\
+\
+- N\'fameros reales.\
+- N\'fameros enteros.\
+- Valores con s\'edmbolo de moneda.\
+- Separadores de miles.\
+- Comas decimales.\
+- Puntos decimales.\
+- Espacios.\
+\
+Evita convertir incorrectamente valores por diferencias regionales.\
+\
+Cuando el formato sea ambiguo, muestra una advertencia.\
+\
+Utiliza formato monetario en pesos colombianos:\
+\
+$ 1.234.567\
+\
+Permite cambiar la etiqueta de moneda en la barra lateral, por ejemplo:\
+\
+- COP\
+- USD\
+- EUR\
+- Sin s\'edmbolo\
+\
+El cambio de moneda debe ser solamente visual. No debes convertir tasas de cambio.\
+\
+==================================================\
+13. ARQUITECTURA DE LA APLICACI\'d3N\
+==================================================\
+\
+Construye una aplicaci\'f3n multip\'e1gina dentro de un \'fanico app.py.\
+\
+Utiliza un men\'fa lateral con las siguientes secciones:\
+\
+1. Inicio y carga de datos.\
+2. Calidad de datos.\
+3. Resumen ejecutivo.\
+4. Cierre mensual.\
+5. Entidades pagadoras.\
+6. Servicios y l\'edneas.\
+7. Sedes y reg\'edmenes.\
+8. Estados de facturaci\'f3n.\
+9. Glosas.\
+10. Recaudo y cartera.\
+11. Tiempos de radicaci\'f3n.\
+12. An\'e1lisis estad\'edstico.\
+13. Valores at\'edpicos.\
+14. Insights y alertas.\
+15. Explorador de datos.\
+16. Descargas.\
+17. Metodolog\'eda.\
+\
+La navegaci\'f3n puede implementarse con:\
+\
+- st.sidebar.radio()\
+- st.sidebar.selectbox()\
+\
+No uses librer\'edas externas de navegaci\'f3n si no son necesarias.\
+\
+==================================================\
+14. CONFIGURACI\'d3N DE LA P\'c1GINA\
+==================================================\
+\
+Usa:\
+\
+st.set_page_config()\
+\
+Configura:\
+\
+- T\'edtulo: Anal\'edtica de Facturaci\'f3n en Salud.\
+- \'cdcono relacionado con anal\'edtica o salud.\
+- Dise\'f1o: wide.\
+- Barra lateral abierta inicialmente.\
+\
+Incluye un encabezado profesional.\
+\
+Agrega un bloque que indique:\
+\
+\'93Los resultados dependen de la calidad y estructura del archivo cargado. Esta herramienta facilita el an\'e1lisis exploratorio y no reemplaza una auditor\'eda financiera, contable, m\'e9dica o contractual.\'94\
+\
+Utiliza estilos CSS moderados dentro de app.py para:\
+\
+- Tarjetas de indicadores.\
+- Colores coherentes.\
+- Alertas.\
+- T\'edtulos.\
+- Espaciado.\
+- Tablas.\
+- Encabezados.\
+\
+No ocultes elementos esenciales de Streamlit mediante CSS fr\'e1gil.\
+\
+==================================================\
+15. BARRA LATERAL Y FILTROS GLOBALES\
+==================================================\
+\
+Despu\'e9s de cargar los datos, la barra lateral debe permitir filtrar por:\
+\
+- Rango de fechas.\
+- A\'f1o.\
+- Mes.\
+- Entidad pagadora.\
+- R\'e9gimen.\
+- Sede.\
+- Servicio.\
+- L\'ednea de servicio.\
+- Estado de factura.\
+- Canal de radicaci\'f3n.\
+- Soporte completo.\
+- Facturas con glosa.\
+- Facturas con saldo.\
+- Rango de valor neto.\
+\
+Incluye:\
+\
+- Bot\'f3n \'93Seleccionar todos\'94.\
+- Bot\'f3n \'93Limpiar filtros\'94.\
+- Indicador del n\'famero de registros filtrados.\
+- Indicador del porcentaje de registros visibles.\
+- Mensaje cuando los filtros dejan el conjunto vac\'edo.\
+\
+Todos los m\'f3dulos deben utilizar la misma versi\'f3n filtrada de los datos.\
+\
+Conserva una comparaci\'f3n entre:\
+\
+- Datos completos.\
+- Datos filtrados.\
+\
+==================================================\
+16. VARIABLES DERIVADAS\
+==================================================\
+\
+Crea, solo cuando existan las columnas necesarias:\
+\
+Porcentaje_Descuento:\
+\
+Descuento / Valor_Bruto \'d7 100\
+\
+Porcentaje_Copago:\
+\
+Copago_Cuota / Valor_Bruto \'d7 100\
+\
+Porcentaje_Glosa:\
+\
+Glosa_Inicial / Valor_Neto \'d7 100\
+\
+Porcentaje_Recaudo:\
+\
+Valor_Pagado / Valor_Neto \'d7 100\
+\
+Porcentaje_Cartera:\
+\
+Saldo_Cartera / Valor_Neto \'d7 100\
+\
+Tiene_Glosa:\
+\
+Glosa_Inicial > 0\
+\
+Tiene_Saldo:\
+\
+Saldo_Cartera > 0\
+\
+Es_Pagada:\
+\
+Estado_Factura == \'93Pagada\'94\
+\
+Rango_Tiempo_Radicacion:\
+\
+- 0 a 3 d\'edas.\
+- 4 a 7 d\'edas.\
+- 8 a 15 d\'edas.\
+- M\'e1s de 15 d\'edas.\
+\
+Los rangos deben presentarse como par\'e1metros anal\'edticos configurables y no como est\'e1ndares normativos.\
+\
+Evita divisiones por cero.\
+\
+Reemplaza infinitos por valores nulos.\
+\
+==================================================\
+17. P\'c1GINA DE INICIO\
+==================================================\
+\
+Antes de cargar el archivo, muestra:\
+\
+- Nombre de la aplicaci\'f3n.\
+- Objetivo.\
+- Tipos de archivos aceptados.\
+- Lista de columnas m\'ednimas.\
+- Lista de columnas recomendadas.\
+- Instrucciones breves.\
+- Aviso de privacidad.\
+- Aviso de uso exploratorio.\
+\
+Despu\'e9s de cargarlo, muestra:\
+\
+- Nombre del archivo.\
+- Tama\'f1o.\
+- Hoja utilizada.\
+- N\'famero de filas.\
+- N\'famero de columnas.\
+- Periodo identificado.\
+- N\'famero de entidades.\
+- N\'famero de sedes.\
+- N\'famero de servicios.\
+- Vista previa de los primeros registros.\
+\
+Incluye una opci\'f3n para visualizar una muestra aleatoria.\
+\
+==================================================\
+18. RESUMEN EJECUTIVO\
+==================================================\
+\
+Crea tarjetas KPI para:\
+\
+- Facturaci\'f3n bruta.\
+- Facturaci\'f3n neta.\
+- N\'famero de facturas.\
+- Cantidad de servicios.\
+- Valor pagado.\
+- Saldo de cartera.\
+- Valor glosado.\
+- Porcentaje de recaudo.\
+- Porcentaje de glosa.\
+- Ticket promedio.\
+- Tiempo promedio de radicaci\'f3n.\
+\
+Cada tarjeta debe:\
+\
+- Usar el conjunto filtrado.\
+- Mostrar un valor legible.\
+- Usar separador de miles.\
+- Mostrar porcentaje con uno o dos decimales.\
+- Comparar con el periodo anterior cuando sea t\'e9cnicamente posible.\
+- Indicar claramente si no es posible calcular el indicador.\
+\
+Incluye gr\'e1ficos:\
+\
+1. Facturaci\'f3n neta mensual.\
+2. Facturaci\'f3n, pagos y cartera por periodo.\
+3. Distribuci\'f3n de estados.\
+4. Facturaci\'f3n por entidad pagadora.\
+5. Participaci\'f3n por l\'ednea de servicio.\
+6. Glosa por periodo.\
+7. Recaudo por periodo.\
+\
+==================================================\
+19. CIERRE MENSUAL\
+==================================================\
+\
+Construye una tabla mensual con:\
+\
+- Periodo.\
+- N\'famero de facturas.\
+- Cantidad de servicios.\
+- Valor bruto.\
+- Descuentos.\
+- Copagos.\
+- Valor neto.\
+- Valor glosado.\
+- Valor pagado.\
+- Saldo de cartera.\
+- Ticket promedio.\
+- Porcentaje de glosa.\
+- Porcentaje de recaudo.\
+- Porcentaje de cartera.\
+- Crecimiento mensual.\
+- Acumulado anual.\
+- Promedio m\'f3vil de tres meses.\
+\
+Permite seleccionar:\
+\
+- Periodicidad mensual.\
+- Periodicidad trimestral.\
+- Periodicidad anual.\
+\
+Incluye gr\'e1ficos interactivos:\
+\
+- L\'ednea de facturaci\'f3n neta.\
+- L\'ednea de recaudo.\
+- L\'ednea de cartera.\
+- Gr\'e1fico combinado de facturaci\'f3n y crecimiento.\
+- Comparaci\'f3n entre a\'f1os.\
+- Promedio m\'f3vil.\
+\
+Destaca:\
+\
+- Mes con mayor facturaci\'f3n.\
+- Mes con menor facturaci\'f3n.\
+- Mes con mayor recaudo.\
+- Mes con mayor cartera.\
+- Mes con mayor glosa.\
+- Variaci\'f3n del \'faltimo periodo frente al anterior.\
+\
+No muestres una comparaci\'f3n si no existe un periodo anterior comparable.\
+\
+==================================================\
+20. ENTIDADES PAGADORAS\
+==================================================\
+\
+Agrupa por Entidad_Pagadora y calcula:\
+\
+- Facturas.\
+- Cantidad.\
+- Facturaci\'f3n bruta.\
+- Facturaci\'f3n neta.\
+- Valor pagado.\
+- Saldo de cartera.\
+- Valor glosado.\
+- Ticket promedio.\
+- Porcentaje de recaudo.\
+- Porcentaje de cartera.\
+- Porcentaje de glosa.\
+- Tiempo promedio de radicaci\'f3n.\
+- Porcentaje de soportes incompletos.\
+- Participaci\'f3n en la facturaci\'f3n.\
+\
+Incluye:\
+\
+- Ranking por facturaci\'f3n.\
+- Ranking por cartera.\
+- Ranking por glosa.\
+- Ranking por recaudo.\
+- Tabla comparativa.\
+- Barras horizontales.\
+- Gr\'e1fico de dispersi\'f3n.\
+- Mapa de calor por entidad y periodo.\
+- Selector de una entidad para verla en detalle.\
+\
+Gr\'e1fico de dispersi\'f3n sugerido:\
+\
+- Eje X: facturaci\'f3n neta.\
+- Eje Y: porcentaje de recaudo.\
+- Tama\'f1o: saldo de cartera.\
+- Color: porcentaje de glosa.\
+- Informaci\'f3n emergente: entidad, facturas y ticket promedio.\
+\
+==================================================\
+21. AN\'c1LISIS DE CONCENTRACI\'d3N Y PARETO\
+==================================================\
+\
+Crea un an\'e1lisis de Pareto para:\
+\
+- Facturaci\'f3n por entidad.\
+- Cartera por entidad.\
+- Glosas por entidad.\
+- Facturaci\'f3n por servicio.\
+\
+Calcula:\
+\
+- Participaci\'f3n individual.\
+- Participaci\'f3n acumulada.\
+- Entidades que explican aproximadamente el 80 %.\
+- \'cdndice de concentraci\'f3n de los principales pagadores.\
+\
+Diferencia claramente:\
+\
+- Concentraci\'f3n de facturaci\'f3n.\
+- Concentraci\'f3n de cartera.\
+- Concentraci\'f3n de glosas.\
+\
+Incluye un gr\'e1fico combinado con:\
+\
+- Barras para valores.\
+- L\'ednea para porcentaje acumulado.\
+- Referencia visual del 80 %.\
+\
+Presenta el 80 % como herramienta de an\'e1lisis de Pareto, no como una regla obligatoria.\
+\
+==================================================\
+22. SERVICIOS Y L\'cdNEAS DE SERVICIO\
+==================================================\
+\
+Analiza:\
+\
+- Facturaci\'f3n por servicio.\
+- Facturaci\'f3n por l\'ednea.\
+- N\'famero de facturas.\
+- Cantidad.\
+- Ticket promedio.\
+- Glosa.\
+- Porcentaje de glosa.\
+- Pagos.\
+- Porcentaje de recaudo.\
+- Cartera.\
+- Participaci\'f3n.\
+\
+Incluye:\
+\
+- Barras horizontales.\
+- Treemap.\
+- Boxplot de valor neto.\
+- Gr\'e1fico de burbujas.\
+- Mapa de calor servicio contra entidad.\
+- Evoluci\'f3n mensual del servicio seleccionado.\
+\
+Permite elegir:\
+\
+- Top 5.\
+- Top 10.\
+- Top 15.\
+- Todos.\
+\
+Evita producir gr\'e1ficos ilegibles cuando existan muchas categor\'edas.\
+\
+==================================================\
+23. SEDES Y REG\'cdMENES\
+==================================================\
+\
+Analiza por Sede y Regimen:\
+\
+- Facturas.\
+- Cantidad.\
+- Facturaci\'f3n neta.\
+- Ticket promedio.\
+- Recaudo.\
+- Cartera.\
+- Glosas.\
+- Porcentaje de glosa.\
+- Porcentaje de recaudo.\
+- Tiempo promedio de radicaci\'f3n.\
+- Soportes incompletos.\
+- Facturas devueltas.\
+\
+Incluye:\
+\
+- Barras agrupadas.\
+- Barras al 100 %.\
+- Boxplot.\
+- Mapa de calor por sede y periodo.\
+- Tabla comparativa.\
+\
+No construyas la secci\'f3n si las columnas no existen.\
+\
+==================================================\
+24. ESTADOS DE FACTURACI\'d3N\
+==================================================\
+\
+Analiza la columna Estado_Factura.\
+\
+Calcula:\
+\
+- N\'famero de facturas por estado.\
+- Porcentaje de facturas.\
+- Valor neto por estado.\
+- Valor pagado por estado.\
+- Saldo por estado.\
+- Estado por periodo.\
+- Estado por entidad.\
+- Estado por sede.\
+\
+Incluye:\
+\
+- Barras por estado.\
+- Barras apiladas por periodo.\
+- Barras apiladas al 100 %.\
+- Mapa de calor.\
+- Tabla cruzada.\
+\
+Crea indicadores para:\
+\
+- Pagadas.\
+- Parcialmente pagadas.\
+- Radicadas.\
+- Aceptadas.\
+- Glosadas.\
+- Devueltas.\
+\
+No asumas que todos esos estados existir\'e1n en cada archivo.\
+\
+Detecta din\'e1micamente las categor\'edas.\
+\
+==================================================\
+25. AN\'c1LISIS DE GLOSAS\
+==================================================\
+\
+Calcula:\
+\
+- Valor total glosado.\
+- N\'famero de facturas con glosa.\
+- Porcentaje de facturas con glosa.\
+- Valor promedio.\
+- Mediana.\
+- Glosa m\'e1xima.\
+- Porcentaje de glosa sobre facturaci\'f3n.\
+- Glosa por entidad.\
+- Glosa por servicio.\
+- Glosa por sede.\
+- Glosa por periodo.\
+- Glosa seg\'fan soporte completo.\
+\
+Diferencia:\
+\
+A. Frecuencia de glosa:\
+\
+Facturas con glosa / total de facturas\
+\
+B. Severidad de glosa:\
+\
+Valor glosado / valor neto\
+\
+Incluye:\
+\
+- Tendencia mensual.\
+- Ranking por entidad.\
+- Ranking por servicio.\
+- Boxplot.\
+- Histograma.\
+- Tabla de facturas con las glosas m\'e1s altas.\
+- Comparaci\'f3n de soporte completo e incompleto.\
+\
+Aclara que una asociaci\'f3n estad\'edstica no demuestra causalidad.\
+\
+==================================================\
+26. RECAUDO Y CARTERA\
+==================================================\
+\
+Calcula:\
+\
+- Valor neto.\
+- Valor pagado.\
+- Saldo.\
+- Porcentaje de recaudo.\
+- Porcentaje de cartera.\
+- Facturas totalmente pagadas.\
+- Facturas parcialmente pagadas.\
+- Facturas con saldo.\
+- Saldo promedio.\
+- Saldo mediano.\
+- Cartera por entidad.\
+- Cartera por servicio.\
+- Cartera por sede.\
+- Cartera por periodo.\
+\
+Incluye:\
+\
+- Evoluci\'f3n del recaudo.\
+- Evoluci\'f3n de cartera.\
+- Ranking de cartera.\
+- Relaci\'f3n facturaci\'f3n-recaudo.\
+- Facturas con mayor saldo.\
+- Entidades con alto volumen y bajo recaudo.\
+- Comparaci\'f3n entre valor neto, pago y saldo.\
+\
+Cuando existan Fecha_Radicacion y una fecha de corte seleccionada por el usuario, crea una antig\'fcedad aproximada:\
+\
+- 0 a 30 d\'edas.\
+- 31 a 60 d\'edas.\
+- 61 a 90 d\'edas.\
+- 91 a 180 d\'edas.\
+- M\'e1s de 180 d\'edas.\
+\
+Aclara que estos rangos son anal\'edticos y configurables.\
+\
+No los presentes como pol\'edtica contable o contractual universal.\
+\
+==================================================\
+27. TIEMPOS DE RADICACI\'d3N\
+==================================================\
+\
+Utiliza Dias_Emision_Radicacion.\
+\
+Si no existe, calc\'falalo con:\
+\
+Fecha_Radicacion - Fecha_Emision\
+\
+Calcula:\
+\
+- Promedio.\
+- Mediana.\
+- Desviaci\'f3n est\'e1ndar.\
+- M\'ednimo.\
+- M\'e1ximo.\
+- Percentil 75.\
+- Percentil 90.\
+- Percentil 95.\
+\
+Analiza por:\
+\
+- Entidad.\
+- Sede.\
+- Canal de radicaci\'f3n.\
+- Servicio.\
+- Estado.\
+- Soporte completo.\
+- Periodo.\
+\
+Incluye:\
+\
+- Histograma.\
+- Boxplot.\
+- Barras por rangos.\
+- Tendencia mensual.\
+- Tabla con casos extremos.\
+\
+Permite configurar los l\'edmites de los rangos desde la barra lateral.\
+\
+==================================================\
+28. AN\'c1LISIS DESCRIPTIVO\
+==================================================\
+\
+Crea una secci\'f3n estad\'edstica con:\
+\
+- Conteo.\
+- Media.\
+- Mediana.\
+- Moda, cuando sea apropiada.\
+- Desviaci\'f3n est\'e1ndar.\
+- Varianza.\
+- M\'ednimo.\
+- M\'e1ximo.\
+- Rango.\
+- Cuartil 1.\
+- Cuartil 3.\
+- Rango intercuart\'edlico.\
+- Percentil 90.\
+- Percentil 95.\
+- Coeficiente de variaci\'f3n.\
+- Asimetr\'eda.\
+- Curtosis.\
+\
+Permite seleccionar una variable num\'e9rica.\
+\
+Incluye:\
+\
+- Histograma.\
+- Boxplot.\
+- Curva de distribuci\'f3n observada.\
+- Tabla de estad\'edsticos.\
+- Interpretaci\'f3n autom\'e1tica en lenguaje claro.\
+\
+La interpretaci\'f3n debe basarse \'fanicamente en los valores calculados.\
+\
+No inventes conclusiones.\
+\
+No llames \'93normal\'94 a una distribuci\'f3n sin evaluarla.\
+\
+==================================================\
+29. CORRELACIONES\
+==================================================\
+\
+Construye una matriz de correlaci\'f3n con las variables num\'e9ricas disponibles:\
+\
+- Cantidad.\
+- Valor_Bruto.\
+- Descuento.\
+- Copago_Cuota.\
+- Valor_Neto.\
+- Dias_Emision_Radicacion.\
+- Glosa_Inicial.\
+- Valor_Pagado.\
+- Saldo_Cartera.\
+\
+Permite seleccionar:\
+\
+- Pearson.\
+- Spearman.\
+\
+Incluye:\
+\
+- Mapa de calor.\
+- Tabla de correlaciones.\
+- Selector de dos variables.\
+- Diagrama de dispersi\'f3n.\
+- L\'ednea de tendencia solamente si puede calcularse de forma segura.\
+\
+Identifica:\
+\
+- Correlaciones positivas fuertes.\
+- Correlaciones negativas fuertes.\
+- Correlaciones d\'e9biles.\
+\
+Usa umbrales configurables y presenta las conclusiones como asociaciones.\
+\
+Incluye esta advertencia:\
+\
+\'93La correlaci\'f3n no implica causalidad. Algunas relaciones pueden surgir directamente de las f\'f3rmulas contables entre las variables.\'94\
+\
+==================================================\
+30. PRUEBAS ESTAD\'cdSTICAS\
+==================================================\
+\
+Crea una secci\'f3n opcional para realizar pruebas estad\'edsticas.\
+\
+A. VARIABLE NUM\'c9RICA CONTRA DOS GRUPOS:\
+\
+- t de Student si los supuestos son razonables.\
+- Mann-Whitney U como alternativa no param\'e9trica.\
+\
+B. VARIABLE NUM\'c9RICA CONTRA M\'c1S DE DOS GRUPOS:\
+\
+- ANOVA de una v\'eda si los supuestos son razonables.\
+- Kruskal-Wallis como alternativa no param\'e9trica.\
+\
+C. DOS VARIABLES CATEG\'d3RICAS:\
+\
+- Prueba chi-cuadrado de independencia.\
+\
+D. NORMALIDAD:\
+\
+- Shapiro-Wilk \'fanicamente sobre muestras razonables.\
+- Si el dataset es grande, toma una muestra reproducible y acl\'e1ralo.\
+\
+Permite que el usuario seleccione:\
+\
+- Variable.\
+- Agrupaci\'f3n.\
+- Nivel de significancia.\
+- Prueba.\
+\
+Muestra:\
+\
+- Hip\'f3tesis nula.\
+- Hip\'f3tesis alternativa.\
+- Estad\'edstico.\
+- p-valor.\
+- Nivel de significancia.\
+- Decisi\'f3n estad\'edstica.\
+- Interpretaci\'f3n sencilla.\
+- Tama\'f1o de las muestras.\
+\
+No establezcas causalidad.\
+\
+No presentes \'93no rechazar la hip\'f3tesis nula\'94 como \'93demostrar que la hip\'f3tesis nula es verdadera\'94.\
+\
+==================================================\
+31. VALORES AT\'cdPICOS\
+==================================================\
+\
+Permite seleccionar una variable num\'e9rica y detectar valores at\'edpicos mediante:\
+\
+- Rango intercuart\'edlico.\
+- Puntaje Z, cuando sea apropiado.\
+- Percentiles configurables.\
+\
+Para el m\'e9todo IQR:\
+\
+L\'edmite inferior = Q1 - 1,5 \'d7 IQR\
+\
+L\'edmite superior = Q3 + 1,5 \'d7 IQR\
+\
+Permite cambiar el multiplicador 1,5.\
+\
+Muestra:\
+\
+- N\'famero de valores at\'edpicos.\
+- Porcentaje.\
+- L\'edmite inferior.\
+- L\'edmite superior.\
+- Tabla de registros.\
+- Boxplot.\
+- Histograma.\
+- Dispersi\'f3n por periodo.\
+\
+Permite analizar los valores at\'edpicos:\
+\
+- Globalmente.\
+- Por servicio.\
+- Por l\'ednea de servicio.\
+- Por entidad.\
+\
+Aclara que un valor at\'edpico no es necesariamente un error. Puede representar una factura leg\'edtima de mayor complejidad o valor.\
+\
+==================================================\
+32. INSIGHTS AUTOM\'c1TICOS\
+==================================================\
+\
+Crea una secci\'f3n \'93Insights y alertas\'94.\
+\
+Los insights deben generarse mediante reglas programadas y c\'e1lculos sobre el DataFrame.\
+\
+No utilices APIs externas ni modelos de inteligencia artificial.\
+\
+Cada insight debe incluir:\
+\
+- Hallazgo.\
+- Valor observado.\
+- Contexto.\
+- Posible implicaci\'f3n.\
+- Acci\'f3n sugerida para revisi\'f3n.\
+\
+Los insights deben estar claramente diferenciados:\
+\
+- Hallazgo calculado.\
+- Interpretaci\'f3n.\
+- Recomendaci\'f3n para investigar.\
+\
+Ejemplos de insights:\
+\
+- Periodo con mayor facturaci\'f3n.\
+- Periodo con mayor ca\'edda.\
+- Entidad con mayor facturaci\'f3n.\
+- Entidad con mayor saldo.\
+- Entidad con menor porcentaje de recaudo.\
+- Entidad con mayor porcentaje de glosa.\
+- Servicio con mayor facturaci\'f3n.\
+- Servicio con mayor cartera.\
+- Sede con mayor tiempo promedio de radicaci\'f3n.\
+- Canal con mayor tiempo de radicaci\'f3n.\
+- Porcentaje de facturas con soporte incompleto.\
+- Relaci\'f3n entre soporte incompleto y estado.\
+- Concentraci\'f3n de facturaci\'f3n.\
+- Concentraci\'f3n de cartera.\
+- Variaci\'f3n del \'faltimo periodo.\
+- Proporci\'f3n de facturas glosadas.\
+- N\'famero de inconsistencias financieras.\
+- N\'famero de facturas at\'edpicas.\
+- Tendencia creciente o decreciente.\
+\
+No generes un insight si los datos no son suficientes.\
+\
+No inventes explicaciones causales.\
+\
+Utiliza textos como:\
+\
+- \'93Los datos muestran\'85\'94\
+- \'93Se observa\'85\'94\
+- \'93Conviene revisar\'85\'94\
+- \'93Este resultado podr\'eda justificar una revisi\'f3n\'85\'94\
+- \'93La informaci\'f3n disponible no permite establecer la causa\'85\'94\
+\
+Evita frases como:\
+\
+- \'93Esto ocurri\'f3 porque\'85\'94\
+- \'93La entidad no paga\'85\'94\
+- \'93Existe fraude\'85\'94\
+- \'93El equipo est\'e1 trabajando mal\'85\'94\
+\
+==================================================\
+33. SEM\'c1FOROS Y ALERTAS CONFIGURABLES\
+==================================================\
+\
+Incluye una secci\'f3n de configuraci\'f3n de alertas.\
+\
+Permite al usuario definir umbrales para:\
+\
+- Porcentaje de glosa.\
+- Porcentaje de cartera.\
+- Porcentaje de recaudo.\
+- D\'edas promedio de radicaci\'f3n.\
+- Porcentaje de soportes incompletos.\
+- Crecimiento negativo.\
+\
+Utiliza tres estados:\
+\
+- Verde.\
+- Amarillo.\
+- Rojo.\
+\
+Los valores predeterminados deben presentarse como par\'e1metros demostrativos y editables, no como est\'e1ndares oficiales.\
+\
+No afirmes que un indicador est\'e1 incumpliendo una norma, contrato o pol\'edtica institucional sin que esos par\'e1metros hayan sido definidos por el usuario.\
+\
+==================================================\
+34. EXPLORADOR DE DATOS\
+==================================================\
+\
+Incluye una secci\'f3n para explorar los registros.\
+\
+Permite:\
+\
+- Buscar texto.\
+- Seleccionar columnas.\
+- Ordenar.\
+- Filtrar.\
+- Elegir cantidad de filas.\
+- Mostrar registros completos.\
+- Mostrar \'fanicamente facturas con saldo.\
+- Mostrar facturas con glosa.\
+- Mostrar soportes incompletos.\
+- Mostrar posibles inconsistencias.\
+- Mostrar valores at\'edpicos.\
+\
+Utiliza st.dataframe() con:\
+\
+- Ancho adaptable.\
+- Columnas monetarias formateadas.\
+- Fechas formateadas.\
+- Altura razonable.\
+\
+No muestres autom\'e1ticamente miles de filas sin control.\
+\
+==================================================\
+35. DESCARGAS\
+==================================================\
+\
+Incluye botones st.download_button() para descargar:\
+\
+1. Datos filtrados en CSV.\
+2. Datos filtrados en Excel.\
+3. Cierre mensual en CSV.\
+4. Cierre mensual en Excel.\
+5. An\'e1lisis por entidades.\
+6. An\'e1lisis por servicios.\
+7. An\'e1lisis por sedes.\
+8. Registros con glosa.\
+9. Registros con cartera.\
+10. Registros at\'edpicos.\
+11. Informe de calidad.\
+12. Resumen de insights.\
+\
+Genera los archivos en memoria con BytesIO o StringIO.\
+\
+No escribas archivos temporales permanentes en el servidor.\
+\
+Usa nombres claros, por ejemplo:\
+\
+- facturacion_filtrada.xlsx\
+- cierre_mensual.xlsx\
+- analisis_entidades.xlsx\
+- registros_glosados.csv\
+- informe_calidad.xlsx\
+- insights_facturacion.txt\
+\
+==================================================\
+36. RENDIMIENTO\
+==================================================\
+\
+La aplicaci\'f3n debe gestionar archivos de tama\'f1o razonable sin congelarse.\
+\
+Utiliza:\
+\
+@st.cache_data\
+\
+para:\
+\
+- Lectura del archivo.\
+- Transformaciones costosas.\
+- Agregaciones.\
+- Preparaci\'f3n de descargas.\
+\
+Aseg\'farate de que las funciones almacenadas en cach\'e9 reciban entradas compatibles.\
+\
+Evita:\
+\
+- Recorrer el DataFrame fila por fila.\
+- Aplicar funciones lentas cuando exista una operaci\'f3n vectorizada.\
+- Recalcular todos los an\'e1lisis con cada interacci\'f3n.\
+- Construir todos los gr\'e1ficos si el usuario no ha abierto la secci\'f3n.\
+- Duplicar grandes DataFrames innecesariamente.\
+\
+Muestra un spinner durante operaciones importantes.\
+\
+Maneja archivos grandes con mensajes claros.\
+\
+No establezcas un l\'edmite arbitrario sin informarlo.\
+\
+==================================================\
+37. MANEJO DE ERRORES\
+==================================================\
+\
+Implementa try/except en operaciones cr\'edticas:\
+\
+- Lectura de archivos.\
+- Lectura de hojas.\
+- Conversi\'f3n de fechas.\
+- Conversi\'f3n monetaria.\
+- C\'e1lculos estad\'edsticos.\
+- Creaci\'f3n de descargas.\
+- Pruebas estad\'edsticas.\
+- Generaci\'f3n de gr\'e1ficos.\
+\
+Nunca muestres un traceback completo al usuario final.\
+\
+Muestra mensajes como:\
+\
+- \'93No fue posible leer el archivo.\'94\
+- \'93La hoja seleccionada no contiene datos.\'94\
+- \'93No se encontr\'f3 la columna necesaria para este an\'e1lisis.\'94\
+- \'93La variable seleccionada no contiene suficientes datos num\'e9ricos.\'94\
+- \'93Los filtros actuales no tienen registros.\'94\
+- \'93No existen suficientes grupos para realizar la prueba.\'94\
+- \'93No fue posible calcular el indicador por divisi\'f3n entre cero.\'94\
+\
+Permite continuar utilizando los dem\'e1s m\'f3dulos si uno falla.\
+\
+==================================================\
+38. EXPERIENCIA DE USUARIO\
+==================================================\
+\
+La aplicaci\'f3n debe ser:\
+\
+- Profesional.\
+- Clara.\
+- Visual.\
+- Ejecutiva.\
+- Intuitiva.\
+- Responsive.\
+- Apropiada para usuarios no expertos en Python.\
+- \'datil para analistas y directivos.\
+\
+Incluye:\
+\
+- Explicaciones breves.\
+- Ayudas emergentes.\
+- Tooltips.\
+- \'cdconos moderados.\
+- Divisores.\
+- Contenedores.\
+- Pesta\'f1as cuando ayuden a organizar.\
+- Expansores para contenido t\'e9cnico.\
+- Mensajes de \'e9xito, advertencia y error.\
+- Indicadores de progreso.\
+\
+No satures la interfaz.\
+\
+Utiliza una paleta relacionada con salud y anal\'edtica:\
+\
+- Azul oscuro.\
+- Azul medio.\
+- Verde azulado.\
+- Gris claro.\
+- Naranja para advertencias.\
+- Rojo para alertas.\
+\
+No dependas exclusivamente del color para comunicar estados.\
+\
+==================================================\
+39. ACCESIBILIDAD\
+==================================================\
+\
+La aplicaci\'f3n debe:\
+\
+- Usar t\'edtulos jer\'e1rquicos.\
+- Utilizar textos legibles.\
+- Evitar colores con bajo contraste.\
+- Explicar las alertas con texto.\
+- No depender exclusivamente de colores.\
+- Incluir etiquetas claras.\
+- Usar formatos num\'e9ricos comprensibles.\
+- Evitar animaciones innecesarias.\
+- Mantener gr\'e1ficos con t\'edtulos y etiquetas.\
+\
+==================================================\
+40. METODOLOG\'cdA Y TRANSPARENCIA\
+==================================================\
+\
+Incluye una secci\'f3n que explique:\
+\
+- Qu\'e9 calcula cada indicador.\
+- C\'f3mo se calcula facturaci\'f3n neta.\
+- C\'f3mo se calcula porcentaje de glosa.\
+- C\'f3mo se calcula porcentaje de recaudo.\
+- C\'f3mo se calcula porcentaje de cartera.\
+- C\'f3mo se calcula el ticket promedio.\
+- Qu\'e9 representa una correlaci\'f3n.\
+- Qu\'e9 es un valor at\'edpico.\
+- C\'f3mo funciona el m\'e9todo IQR.\
+- Qu\'e9 significa un p-valor.\
+- Limitaciones del an\'e1lisis.\
+- Dependencia de la calidad de datos.\
+\
+Incluye las f\'f3rmulas:\
+\
+Porcentaje de glosa:\
+\
+Glosa_Inicial / Valor_Neto \'d7 100\
+\
+Porcentaje de recaudo:\
+\
+Valor_Pagado / Valor_Neto \'d7 100\
+\
+Porcentaje de cartera:\
+\
+Saldo_Cartera / Valor_Neto \'d7 100\
+\
+Ticket promedio:\
+\
+Valor_Neto / n\'famero de facturas\
+\
+Aseg\'farate de manejar valores netos iguales a cero.\
+\
+==================================================\
+41. PRIVACIDAD Y DATOS DE SALUD\
+==================================================\
+\
+Incluye una advertencia visible:\
+\
+\'93Evite cargar archivos que contengan nombres de pacientes, documentos de identidad, historias cl\'ednicas, diagn\'f3sticos u otra informaci\'f3n personal o sensible. Utilice archivos anonimizados y siga las pol\'edticas de tratamiento de datos de su organizaci\'f3n.\'94\
+\
+La aplicaci\'f3n:\
+\
+- No debe solicitar datos de pacientes.\
+- No debe necesitar nombres.\
+- No debe utilizar identificaciones personales.\
+- No debe enviar datos a APIs.\
+- No debe guardar permanentemente la informaci\'f3n.\
+- No debe mostrar ejemplos con datos cl\'ednicos sensibles.\
+\
+No presentes la aplicaci\'f3n como sistema oficial de auditor\'eda, contabilidad o historia cl\'ednica.\
+\
+==================================================\
+42. FUNCIONES RECOMENDADAS EN APP.PY\
+==================================================\
+\
+Organiza app.py mediante funciones claras, por ejemplo:\
+\
+- configurar_pagina()\
+- aplicar_estilos()\
+- cargar_archivo()\
+- leer_excel()\
+- leer_csv()\
+- seleccionar_hoja()\
+- normalizar_nombre_columna()\
+- detectar_columnas()\
+- mapear_columnas()\
+- convertir_fechas()\
+- convertir_valores_monetarios()\
+- validar_datos()\
+- calcular_puntaje_calidad()\
+- limpiar_datos()\
+- crear_variables_derivadas()\
+- aplicar_filtros()\
+- calcular_kpis()\
+- construir_cierre_mensual()\
+- analizar_entidades()\
+- analizar_servicios()\
+- analizar_sedes()\
+- analizar_estados()\
+- analizar_glosas()\
+- analizar_cartera()\
+- analizar_tiempos()\
+- calcular_estadisticos()\
+- calcular_correlaciones()\
+- ejecutar_prueba_estadistica()\
+- detectar_atipicos()\
+- calcular_pareto()\
+- generar_insights()\
+- generar_alertas()\
+- formatear_moneda()\
+- formatear_porcentaje()\
+- convertir_dataframe_excel()\
+- convertir_dataframe_csv()\
+- mostrar_inicio()\
+- mostrar_calidad()\
+- mostrar_resumen()\
+- mostrar_cierre()\
+- mostrar_entidades()\
+- mostrar_servicios()\
+- mostrar_sedes_regimenes()\
+- mostrar_estados()\
+- mostrar_glosas()\
+- mostrar_cartera()\
+- mostrar_tiempos()\
+- mostrar_estadistica()\
+- mostrar_atipicos()\
+- mostrar_insights()\
+- mostrar_explorador()\
+- mostrar_descargas()\
+- mostrar_metodologia()\
+- main()\
+\
+Puedes ajustar estos nombres si existe una alternativa mejor.\
+\
+No concentres toda la l\'f3gica en una sola funci\'f3n.\
+\
+==================================================\
+43. ESTADO DE SESI\'d3N\
+==================================================\
+\
+Utiliza st.session_state para conservar durante la sesi\'f3n:\
+\
+- Archivo cargado.\
+- Hoja seleccionada.\
+- Mapeo de columnas.\
+- Datos originales.\
+- Datos limpios.\
+- Filtros.\
+- Configuraci\'f3n de moneda.\
+- Umbrales de alertas.\
+- Navegaci\'f3n.\
+- Preferencias de visualizaci\'f3n.\
+\
+Reinicia correctamente el estado cuando se cargue un archivo diferente.\
+\
+Incluye un bot\'f3n:\
+\
+\'93Reiniciar aplicaci\'f3n\'94\
+\
+Debe limpiar los datos y volver a la pantalla inicial.\
+\
+==================================================\
+44. VALIDACIONES MATEM\'c1TICAS\
+==================================================\
+\
+Antes de mostrar resultados, verifica:\
+\
+- Que los denominadores no sean cero.\
+- Que los porcentajes no sean infinitos.\
+- Que los NaN est\'e9n controlados.\
+- Que los totales coincidan con los filtros.\
+- Que no existan saldos negativos inesperados sin advertencia.\
+- Que una factura no se cuente varias veces cuando se utilice nunique.\
+- Que las fechas est\'e9n ordenadas cronol\'f3gicamente.\
+- Que los meses no queden en orden alfab\'e9tico.\
+- Que los c\'e1lculos del periodo anterior correspondan al nivel de agrupaci\'f3n.\
+- Que el total de participaciones sea cercano al 100 %, considerando redondeos.\
+\
+==================================================\
+45. PRUEBAS FUNCIONALES OBLIGATORIAS\
+==================================================\
+\
+Antes de entregar, revisa conceptualmente los siguientes casos:\
+\
+CASO 1: ARCHIVO XLSX CORRECTO\
+\
+- Cargar archivo.\
+- Detectar hojas.\
+- Seleccionar Facturacion.\
+- Validar columnas.\
+- Convertir fechas.\
+- Crear indicadores.\
+- Aplicar filtros.\
+- Crear gr\'e1ficos.\
+- Descargar resultados.\
+\
+CASO 2: ARCHIVO CSV\
+\
+- Detectar separador.\
+- Normalizar columnas.\
+- Realizar an\'e1lisis.\
+- Descargar resultados.\
+\
+CASO 3: COLUMNA OPCIONAL AUSENTE\
+\
+- Cargar archivo sin Sede.\
+- Permitir continuar.\
+- Desactivar el an\'e1lisis por sede.\
+- Mostrar mensaje explicativo.\
+\
+CASO 4: COLUMNA M\'cdNIMA AUSENTE\
+\
+- Detectar ausencia.\
+- Informar el problema.\
+- Activar mapeo manual.\
+- No provocar errores.\
+\
+CASO 5: ARCHIVO VAC\'cdO\
+\
+- Mostrar mensaje.\
+- No ejecutar c\'e1lculos.\
+\
+CASO 6: FECHAS INV\'c1LIDAS\
+\
+- Convertir con errors="coerce".\
+- Informar cu\'e1ntos registros fallaron.\
+- Permitir excluirlos.\
+\
+CASO 7: VALORES MONETARIOS CON S\'cdMBOLOS\
+\
+- Procesar valores.\
+- Informar conversiones fallidas.\
+- Mantener resultados consistentes.\
+\
+CASO 8: FILTROS SIN RESULTADOS\
+\
+- Mostrar advertencia.\
+- No generar gr\'e1ficos vac\'edos con errores.\
+- Permitir restablecer filtros.\
+\
+CASO 9: DIVISI\'d3N ENTRE CERO\
+\
+- Devolver nulo o cero seg\'fan corresponda.\
+- Informar que no pudo calcularse.\
+- No generar infinito.\
+\
+CASO 10: ARCHIVO GRANDE\
+\
+- Utilizar cach\'e9.\
+- Evitar ciclos fila por fila.\
+- Mostrar spinner.\
+- Mantener navegaci\'f3n funcional.\
+\
+CASO 11: DESPLIEGUE\
+\
+- app.py est\'e1 en la ra\'edz.\
+- requirements.txt est\'e1 en la ra\'edz.\
+- No existen rutas locales.\
+- No existen secretos.\
+- No se requiere dataset en el repositorio.\
+- La aplicaci\'f3n inicia mostrando el cargador.\
+- Las dependencias corresponden a los imports.\
+\
+==================================================\
+46. CRITERIOS DE ACEPTACI\'d3N\
+==================================================\
+\
+El proyecto ser\'e1 aceptable si:\
+\
+- app.py est\'e1 completo.\
+- requirements.txt est\'e1 completo.\
+- La aplicaci\'f3n inicia sin un dataset incluido.\
+- Permite cargar Excel y CSV.\
+- Permite seleccionar una hoja.\
+- Valida las columnas.\
+- Permite mapear columnas.\
+- Maneja columnas ausentes.\
+- Genera indicadores.\
+- Genera los an\'e1lisis financieros solicitados.\
+- Genera gr\'e1ficos interactivos.\
+- Aplica filtros globales.\
+- Genera insights calculados.\
+- Ejecuta an\'e1lisis estad\'edsticos.\
+- Detecta valores at\'edpicos.\
+- Permite descargar resultados.\
+- Maneja errores.\
+- No contiene rutas locales.\
+- No depende del dataset de desarrollo.\
+- No utiliza APIs externas.\
+- Es compatible con Streamlit Community Cloud.\
+- El c\'f3digo es legible.\
+- Las funciones est\'e1n comentadas.\
+- La interfaz est\'e1 en espa\'f1ol.\
+- Los nombres de las variables son descriptivos.\
+- No existen funciones vac\'edas.\
+- No existe pseudoc\'f3digo.\
+- No existen marcadores pendientes.\
+- No se generan errores por columnas opcionales ausentes.\
+\
+==================================================\
+47. INSTRUCCIONES DE DESPLIEGUE\
+==================================================\
+\
+Al final de la respuesta, agrega instrucciones breves para que el usuario pueda:\
+\
+1. Crear un repositorio en GitHub.\
+2. Subir app.py.\
+3. Subir requirements.txt.\
+4. Verificar que ambos est\'e9n en la ra\'edz.\
+5. Ingresar a Streamlit Community Cloud.\
+6. Conectar su cuenta de GitHub.\
+7. Seleccionar el repositorio.\
+8. Seleccionar la rama.\
+9. Indicar app.py como archivo principal.\
+10. Desplegar la aplicaci\'f3n.\
+11. Abrir la URL generada.\
+\
+No inventes la URL del proyecto.\
+\
+No obligues al usuario a incorporar el dataset en GitHub.\
+\
+La aplicaci\'f3n debe solicitar el archivo cada vez que una persona inicia una sesi\'f3n nueva.\
+\
+==================================================\
+48. ORDEN INTERNO DE DESARROLLO\
+==================================================\
+\
+Desarrolla en este orden:\
+\
+PASO 1:\
+Define los imports y configura la p\'e1gina.\
+\
+PASO 2:\
+Crea los estilos visuales.\
+\
+PASO 3:\
+Implementa la carga de Excel y CSV.\
+\
+PASO 4:\
+Implementa la selecci\'f3n de hojas.\
+\
+PASO 5:\
+Implementa la normalizaci\'f3n de columnas.\
+\
+PASO 6:\
+Implementa el mapeo manual.\
+\
+PASO 7:\
+Implementa la validaci\'f3n de calidad.\
+\
+PASO 8:\
+Implementa las conversiones de tipos.\
+\
+PASO 9:\
+Implementa la limpieza controlada.\
+\
+PASO 10:\
+Implementa variables derivadas.\
+\
+PASO 11:\
+Implementa filtros globales.\
+\
+PASO 12:\
+Implementa los KPI.\
+\
+PASO 13:\
+Implementa el cierre mensual.\
+\
+PASO 14:\
+Implementa an\'e1lisis por entidad.\
+\
+PASO 15:\
+Implementa an\'e1lisis por servicio y l\'ednea.\
+\
+PASO 16:\
+Implementa an\'e1lisis por sede y r\'e9gimen.\
+\
+PASO 17:\
+Implementa estados.\
+\
+PASO 18:\
+Implementa glosas.\
+\
+PASO 19:\
+Implementa recaudo y cartera.\
+\
+PASO 20:\
+Implementa tiempos.\
+\
+PASO 21:\
+Implementa estad\'edstica descriptiva.\
+\
+PASO 22:\
+Implementa correlaciones.\
+\
+PASO 23:\
+Implementa pruebas estad\'edsticas.\
+\
+PASO 24:\
+Implementa detecci\'f3n de valores at\'edpicos.\
+\
+PASO 25:\
+Implementa Pareto.\
+\
+PASO 26:\
+Implementa insights y alertas.\
+\
+PASO 27:\
+Implementa explorador.\
+\
+PASO 28:\
+Implementa descargas.\
+\
+PASO 29:\
+Implementa metodolog\'eda.\
+\
+PASO 30:\
+Revisa el manejo de errores.\
+\
+PASO 31:\
+Revisa el rendimiento.\
+\
+PASO 32:\
+Crea requirements.txt.\
+\
+PASO 33:\
+Ejecuta una revisi\'f3n integral del c\'f3digo.\
+\
+==================================================\
+49. FORMA DE ENTREGA\
+==================================================\
+\
+Entrega primero:\
+\
+ARCHIVO 1: app.py\
+\
+Incluye el contenido completo del archivo en un bloque de c\'f3digo Python.\
+\
+Despu\'e9s entrega:\
+\
+ARCHIVO 2: requirements.txt\
+\
+Incluye el contenido completo del archivo en un bloque de texto.\
+\
+Si el entorno permite generar archivos descargables, crea ambos archivos y proporciona enlaces de descarga.\
+\
+No dividas app.py en partes inconexas.\
+\
+No resumas funciones con comentarios.\
+\
+No omitas c\'f3digo indicando que es demasiado largo.\
+\
+No solicites al usuario completar el proyecto.\
+\
+No respondas \'fanicamente con explicaciones.\
+\
+==================================================\
+50. INSTRUCCI\'d3N FINAL\
+==================================================\
+\
+Genera ahora el proyecto completo.\
+\
+Antes de entregarlo, verifica:\
+\
+- Sintaxis de Python.\
+- Imports.\
+- Dependencias.\
+- Lectura de Excel.\
+- Lectura de CSV.\
+- Selecci\'f3n de hojas.\
+- Normalizaci\'f3n de columnas.\
+- Mapeo.\
+- Manejo de fechas.\
+- Manejo monetario.\
+- Variables derivadas.\
+- Filtros.\
+- KPI.\
+- Cierre mensual.\
+- Entidades.\
+- Servicios.\
+- Sedes.\
+- Reg\'edmenes.\
+- Estados.\
+- Glosas.\
+- Recaudo.\
+- Cartera.\
+- Tiempos.\
+- Estad\'edstica.\
+- Correlaciones.\
+- Pruebas.\
+- At\'edpicos.\
+- Insights.\
+- Descargas.\
+- Cach\'e9.\
+- Estado de sesi\'f3n.\
+- Mensajes de error.\
+- Compatibilidad con Streamlit Community Cloud.\
+\
+Si una funcionalidad avanzada compromete la estabilidad general, utiliza una implementaci\'f3n m\'e1s sencilla pero funcional.\
+\
+Prioriza en este orden:\
+\
+1. Funcionamiento.\
+2. Independencia respecto del dataset original.\
+3. Prevenci\'f3n de errores.\
+4. Correcci\'f3n de los c\'e1lculos.\
+5. Facilidad de carga de archivos.\
+6. Claridad de los an\'e1lisis.\
+7. Interactividad.\
+8. Rendimiento.\
+9. Dise\'f1o.\
+10. Funciones estad\'edsticas avanzadas.\
+\
+Entrega app.py y requirements.txt completamente terminados.}
